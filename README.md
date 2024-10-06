@@ -16,6 +16,8 @@ October 13, 2024 <br>
 
 ### Research objectives
 
+<hr>
+
 * *"...learn more about the application of AI within corporate information infrastructure, specifically focusing on leaders and emerging players in this field."*
 * *...the current landscape, emerging technologies, and new growth opportunities, with a focus on financial services."* 
 * *"...to what extent other financial services firms utilize AI.* 
@@ -23,21 +25,41 @@ October 13, 2024 <br>
 
 ### Installing/replication/running analysis
 
+<hr>
+
 Must include instructions for forking, setting up and running any examples, demos, experiments, etc...
 
-### Porter's Five Forces
+### Research methods
+
+<hr>
+
+### Research results
+
+<hr>
+
+Introduce (and summarize the results.) Go into more depth below...
+
+-scrapy:
+   relies heavily on element and CSS class names..
+   will be near impossible to abstract.
+   Every source website would likely need its own custom spider
+   (The docs include a VERY rosy example)
+
+
+
+#### Porter's Five Forces
 
 Relevant market factors...
 
-### "Supplier Power"
+#### "Supplier Power"
 
 Software dependencies, etc...
 
-### "Threat of Entry"
+#### "Threat of Entry"
 
 Particularly the double edge sword of ubiquitous, affordable cloud resources...
 
-### Substitutes
+#### Substitutes
 
 AI and conventional replacements/alternatives...
 
