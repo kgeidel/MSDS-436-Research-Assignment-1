@@ -19,8 +19,7 @@ import scrapy
 class CodataSpider(scrapy.Spider):
     ''' A scrapy spider for articles in CODATA's Data Science Journal '''
     SELECTOR_ACCESSOR_ATTR_MAP = {
-        # I have NO IDEA what these CSS classes are about.
-        # This seems to be an attempt to prevent/discourage scraping?!
+        # args for scrapy's css method to grab each value
         'type': 'div.cPyXJe::text',
         'title': 'a.wzdQU::text',    
         'authors': 'address.AMuyK::text',
@@ -35,7 +34,7 @@ class CodataSpider(scrapy.Spider):
         for entry in response.css("article"):
             entry_dict = {key: entry.css(self.SELECTOR_ACCESSOR_ATTR_MAP[key]).get() for key in ['type', 'title', 'authors']}
             entry_dict.update(
-                {'article_path': entry.css('a').attrib['href']}
+                {'article_path': entry.css('a.wzdQU').attrib['href']}
             )
             yield entry_dict
 
