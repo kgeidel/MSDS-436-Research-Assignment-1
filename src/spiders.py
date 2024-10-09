@@ -15,6 +15,8 @@ import scrapy
 # attributes could be stored in postgres (use class vars for now?)
 
 # TODO: Replace jsonl outputs with an item pipeline to a postgres database!!!!!
+# https://medium.com/codelog/store-scrapy-crawled-data-in-postgressql-2da9e62ae272
+
 
 class CodataSpider(scrapy.Spider):
     ''' A scrapy spider for articles in CODATA's Data Science Journal '''
@@ -38,6 +40,7 @@ class CodataSpider(scrapy.Spider):
             )
             yield entry_dict
 
-        # next_page = response.css('li.next a::attr("href")').get()
-        # if next_page is not None:
-        #     yield response.follow(next_page, self.parse)
+        next_page = response.css('li.next a::attr("href")').get()
+        if next_page is not None:
+            print("NEXTED!")
+            yield response.follow(next_page, self.parse)
