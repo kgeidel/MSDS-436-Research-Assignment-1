@@ -1,3 +1,7 @@
+---
+layout: github-markdown
+css: main.css
+---
 <div align=center>
 RESEARCH ASSIGNMENT #1:  <br>
 A COMPETITIVE REVIEW OF AI IN THE MARKETPLACE
@@ -101,7 +105,7 @@ A situational analysis of a potential business opportunity, Porter's Five Forces
 
 <hr>
 
-<div style="padding-left: 1.5em; text-indent:-1.5em;">
+<div class="references">
 
 “A Fast and Powerful Scraping and Web Crawling Framework.” Scrapy. Accessed October 8, 2024. https://scrapy.org/. 
 
