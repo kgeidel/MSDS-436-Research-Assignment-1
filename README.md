@@ -29,7 +29,30 @@ October 13, 2024 <br>
 
 The following instructions will allow you to replicate the scrapy experiment. These instructions are how I would run this on Linux. A Unix terminal on a Mac should be similar. More modifications may be needed to run this on Windows.
 
+```shell
+# navigate to your dir of repos (/home/kevin/repos for example)
+cd ~/repos
 
+# clone this repo
+git clone git@github.com:kgeidel/MSDS-436-Research-Assignment-1.git
+
+# create a python environment (I use pyenv, you may use something else, i.e. conda)
+pyenv virtualenv msds436
+
+# enter the repo and make our new env the designated env
+# I've used Python 3.12.6
+cd MSDS-436-Research-Assignment-1
+pyenv local 3.12.6 msds436
+
+# Install dependencies using pip
+pip install -r requirements.txt
+
+# Run the spider
+scrapy runspider src/spiders.py -o data/articles.jsonl
+
+# View the results!
+cat data/articles.jsonl
+```
 
 ### Research methods
 
